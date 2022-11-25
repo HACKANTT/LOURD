@@ -28,11 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.gbHackathons = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.hackatonBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.hackatonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hackatonBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hackatonBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.gbHackathons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,12 +108,54 @@
             // 
             this.gbHackathons.BackColor = System.Drawing.Color.Transparent;
             this.gbHackathons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gbHackathons.Controls.Add(this.button4);
+            this.gbHackathons.Controls.Add(this.listBox1);
             this.gbHackathons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbHackathons.Location = new System.Drawing.Point(228, 22);
             this.gbHackathons.Name = "gbHackathons";
             this.gbHackathons.Size = new System.Drawing.Size(560, 416);
             this.gbHackathons.TabIndex = 7;
             this.gbHackathons.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(83, 244);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(220, 31);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(82, 79);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(221, 154);
+            this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // hackatonBindingSource3
+            // 
+            this.hackatonBindingSource3.DataSource = typeof(Hackat_Orga.Models.Hackaton);
+            // 
+            // hackatonBindingSource
+            // 
+            this.hackatonBindingSource.DataSource = typeof(Hackat_Orga.Models.Hackaton);
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(Hackat_Orga.Models.Hackaton);
+            // 
+            // hackatonBindingSource1
+            // 
+            this.hackatonBindingSource1.DataSource = typeof(Hackat_Orga.Models.Hackaton);
+            // 
+            // hackatonBindingSource2
+            // 
+            this.hackatonBindingSource2.DataSource = typeof(Hackat_Orga.Models.Hackaton);
             // 
             // Home
             // 
@@ -115,6 +171,12 @@
             this.HelpButton = true;
             this.Name = "Home";
             this.Text = "Home";
+            this.gbHackathons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +188,12 @@
         private Button button2;
         private Button button3;
         private GroupBox gbHackathons;
+        private BindingSource bindingSource1;
+        private BindingSource hackatonBindingSource;
+        private ListBox listBox1;
+        private BindingSource hackatonBindingSource3;
+        private BindingSource hackatonBindingSource1;
+        private BindingSource hackatonBindingSource2;
+        private Button button4;
     }
 }

@@ -16,6 +16,7 @@ namespace Hackat_Orga.Models
         {
         }
 
+        public virtual DbSet<Conference> Conferences { get; set; } = null!;
         public virtual DbSet<DoctrineMigrationVersion> DoctrineMigrationVersions { get; set; } = null!;
         public virtual DbSet<Evenement> Evenements { get; set; } = null!;
         public virtual DbSet<Hackaton> Hackatons { get; set; } = null!;
@@ -36,6 +37,25 @@ namespace Hackat_Orga.Models
         {
             modelBuilder.UseCollation("utf8mb4_general_ci")
                 .HasCharSet("utf8mb4");
+
+            modelBuilder.Entity<Conference>(entity =>
+            {
+                entity.ToTable("conference");
+
+                entity.UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Intervenant)
+                    .HasMaxLength(20)
+                    .HasColumnName("intervenant");
+
+                entity.Property(e => e.Theme)
+                    .HasMaxLength(20)
+                    .HasColumnName("theme");
+            });
 
             modelBuilder.Entity<DoctrineMigrationVersion>(entity =>
             {
