@@ -34,19 +34,25 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.gbHackathons = new System.Windows.Forms.GroupBox();
+            this.dataGridHack = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.hackatonBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.hackatonBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.hackatonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hackatonBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hackatonBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.hackatonBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.gbHackathons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -108,6 +114,7 @@
             // 
             this.gbHackathons.BackColor = System.Drawing.Color.Transparent;
             this.gbHackathons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gbHackathons.Controls.Add(this.dataGridHack);
             this.gbHackathons.Controls.Add(this.button4);
             this.gbHackathons.Controls.Add(this.listBox1);
             this.gbHackathons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -116,6 +123,16 @@
             this.gbHackathons.Size = new System.Drawing.Size(560, 416);
             this.gbHackathons.TabIndex = 7;
             this.gbHackathons.TabStop = false;
+            // 
+            // dataGridHack
+            // 
+            this.dataGridHack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridHack.Location = new System.Drawing.Point(25, 43);
+            this.dataGridHack.Name = "dataGridHack";
+            this.dataGridHack.RowTemplate.Height = 25;
+            this.dataGridHack.Size = new System.Drawing.Size(510, 195);
+            this.dataGridHack.TabIndex = 2;
+            this.dataGridHack.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridHack_CellContentClick);
             // 
             // button4
             // 
@@ -137,6 +154,10 @@
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // hackatonBindingSource5
+            // 
+            this.hackatonBindingSource5.DataSource = typeof(Hackat_Orga.Models.Hackaton);
+            // 
             // hackatonBindingSource3
             // 
             this.hackatonBindingSource3.DataSource = typeof(Hackat_Orga.Models.Hackaton);
@@ -157,6 +178,10 @@
             // 
             this.hackatonBindingSource2.DataSource = typeof(Hackat_Orga.Models.Hackaton);
             // 
+            // hackatonBindingSource4
+            // 
+            this.hackatonBindingSource4.DataSource = typeof(Hackat_Orga.Models.Hackaton);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -172,11 +197,14 @@
             this.Name = "Home";
             this.Text = "Home";
             this.gbHackathons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridHack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hackatonBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +223,23 @@
         private BindingSource hackatonBindingSource1;
         private BindingSource hackatonBindingSource2;
         private Button button4;
+        private DataGridView dataGridHack;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateDebutDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateFinDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn heureDebutDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn heureFinDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lieuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn rueDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn villeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn cpDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn themeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn imageDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateLimiteDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nbPlacesDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn inscriptionsDataGridViewTextBoxColumn;
+        private BindingSource hackatonBindingSource5;
+        private BindingSource hackatonBindingSource4;
     }
 }
