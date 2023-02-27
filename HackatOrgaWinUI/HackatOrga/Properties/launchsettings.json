@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "HackatOrga (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "HackatOrga (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
